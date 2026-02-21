@@ -1,0 +1,41 @@
+{
+  "top_5": [
+    "contract_type",
+    "total_charges",
+    "internet_service",
+    "tenure_months",
+    "monthly_charges"
+  ],
+  "top_70_cumulative": [
+    "contract_type",
+    "total_charges",
+    "internet_service"
+  ],
+  "consistently_high": [
+    "contract_type"
+  ],
+  "rfe_logistic": [
+    "tenure_months",
+    "contract_type",
+    "internet_service",
+    "support_calls",
+    "late_payments"
+  ],
+  "rfe_random_forest": [
+    "age",
+    "tenure_months",
+    "monthly_charges",
+    "total_charges",
+    "contract_type",
+    "internet_service",
+    "support_calls",
+    "late_payments"
+  ],
+  "lasso": [
+    "contract_type",
+    "internet_service",
+    "tenure_months",
+    "support_calls",
+    "late_payments"
+  ]
+}
