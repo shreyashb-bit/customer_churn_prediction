@@ -1,0 +1,296 @@
+2026-02-15 12:32:39 | INFO | __main__ | run.py:24 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 12:32:39 | INFO | __main__ | run.py:48 | PipelineRunner initialized
+2026-02-15 12:32:39 | INFO | __main__ | run.py:56 | ========== PIPELINE STARTED ==========
+2026-02-15 12:32:39 | INFO | __main__ | run.py:61 | STEP 1: Loading raw data
+2026-02-15 12:32:39 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 12:32:39 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 12:32:39 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 12:32:39 | INFO | __main__ | run.py:66 | Raw data shape: (100000, 10)
+2026-02-15 12:32:39 | INFO | __main__ | run.py:71 | STEP 2: Validating data
+2026-02-15 12:32:39 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 12:32:39 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 12:32:39 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 12:32:39 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 12:32:39 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 12:32:39 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 12:32:39 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 12:32:39 | INFO | __main__ | run.py:79 | STEP 3: Feature engineering
+2026-02-15 12:32:39 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 12:32:39 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 12:32:39 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 12:32:39 | INFO | __main__ | run.py:84 | Processed data shape: (100000, 13)
+2026-02-15 12:32:39 | INFO | __main__ | run.py:91 | STEP 4: Training model
+2026-02-15 12:32:39 | INFO | src.training.train | train.py:44 | Trainer initialized successfully
+2026-02-15 12:32:39 | INFO | src.training.train | train.py:191 | Training started
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:214 | Train-test split completed
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:59 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:60 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:128 | Using model: logistic_regression
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:223 | Model training completed
+2026-02-15 12:32:40 | INFO | src.training.evaluate | evaluate.py:28 | Evaluator initialized
+2026-02-15 12:32:40 | INFO | src.training.evaluate | evaluate.py:32 | Calculating evaluation metrics
+2026-02-15 12:32:40 | INFO | src.training.evaluate | evaluate.py:43 | Evaluation completed: {'accuracy': 0.64385, 'precision': 0.5420766292394953, 'recall': 0.5965605095541401, 'f1_score': 0.5680150403299169, 'roc_auc': 0.6354819008676049, 'confusion_matrix': [[8194, 3956], [3167, 4683]]}
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:253 | Model saved at model_registry\model_20260215_123240\model.pkl
+2026-02-15 12:32:40 | INFO | src.training.evaluate | evaluate.py:53 | Evaluation report saved at model_registry\model_20260215_123240\evaluation.json
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:285 | Model metadata saved at model_registry\model_20260215_123240\model.yaml
+2026-02-15 12:32:40 | INFO | src.training.train | train.py:287 | Training pipeline completed successfully
+2026-02-15 12:32:40 | INFO | __main__ | run.py:96 | Model saved at: model_registry\model_20260215_123240\model.pkl
+2026-02-15 12:32:40 | INFO | __main__ | run.py:98 | ========== PIPELINE COMPLETED ==========
+2026-02-15 12:39:48 | INFO | __main__ | run.py:24 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 12:39:48 | INFO | __main__ | run.py:48 | PipelineRunner initialized
+2026-02-15 12:39:48 | INFO | __main__ | run.py:56 | ========== PIPELINE STARTED ==========
+2026-02-15 12:39:48 | INFO | __main__ | run.py:61 | STEP 1: Loading raw data
+2026-02-15 12:39:48 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 12:39:48 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 12:39:48 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 12:39:48 | INFO | __main__ | run.py:66 | Raw data shape: (100000, 10)
+2026-02-15 12:39:48 | INFO | __main__ | run.py:71 | STEP 2: Validating data
+2026-02-15 12:39:48 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 12:39:48 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 12:39:48 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 12:39:48 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 12:39:48 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 12:39:48 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 12:39:48 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 12:39:48 | INFO | __main__ | run.py:79 | STEP 3: Feature engineering
+2026-02-15 12:39:48 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 12:39:48 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 12:39:49 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 12:39:49 | INFO | __main__ | run.py:84 | Processed data shape: (100000, 13)
+2026-02-15 12:39:49 | INFO | __main__ | run.py:91 | STEP 4: Training model
+2026-02-15 12:39:49 | INFO | src.training.train | train.py:40 | Trainer initialized successfully
+2026-02-15 12:39:49 | INFO | src.training.train | train.py:167 | Training started
+2026-02-15 12:39:49 | INFO | src.training.train | train.py:188 | Train-test split completed
+2026-02-15 12:39:49 | INFO | src.training.train | train.py:55 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 12:39:49 | INFO | src.training.train | train.py:56 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 12:39:49 | INFO | src.training.train | train.py:110 | Using model: logistic_regression
+2026-02-15 12:39:49 | INFO | src.training.train | train.py:195 | Starting Stratified K-Fold Cross Validation
+2026-02-15 12:39:49 | ERROR | __main__ | run.py:101 | Pipeline execution failed
+2026-02-15 12:39:49 | ERROR | __main__ | run.py:102 | 'TrainConfig' object has no attribute 'cross_validation_folds'
+2026-02-15 12:40:14 | INFO | __main__ | run.py:24 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 12:40:14 | INFO | __main__ | run.py:48 | PipelineRunner initialized
+2026-02-15 12:40:14 | INFO | __main__ | run.py:56 | ========== PIPELINE STARTED ==========
+2026-02-15 12:40:14 | INFO | __main__ | run.py:61 | STEP 1: Loading raw data
+2026-02-15 12:40:14 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 12:40:14 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 12:40:15 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 12:40:15 | INFO | __main__ | run.py:66 | Raw data shape: (100000, 10)
+2026-02-15 12:40:15 | INFO | __main__ | run.py:71 | STEP 2: Validating data
+2026-02-15 12:40:15 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 12:40:15 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 12:40:15 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 12:40:15 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 12:40:15 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 12:40:15 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 12:40:15 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 12:40:15 | INFO | __main__ | run.py:79 | STEP 3: Feature engineering
+2026-02-15 12:40:15 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 12:40:15 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 12:40:16 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 12:40:16 | INFO | __main__ | run.py:84 | Processed data shape: (100000, 13)
+2026-02-15 12:40:16 | INFO | __main__ | run.py:91 | STEP 4: Training model
+2026-02-15 12:40:16 | INFO | src.training.train | train.py:40 | Trainer initialized successfully
+2026-02-15 12:40:16 | INFO | src.training.train | train.py:167 | Training started
+2026-02-15 12:40:16 | INFO | src.training.train | train.py:188 | Train-test split completed
+2026-02-15 12:40:16 | INFO | src.training.train | train.py:55 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 12:40:16 | INFO | src.training.train | train.py:56 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 12:40:16 | INFO | src.training.train | train.py:110 | Using model: logistic_regression
+2026-02-15 12:40:16 | INFO | src.training.train | train.py:195 | Starting Stratified K-Fold Cross Validation
+2026-02-15 12:40:24 | INFO | src.training.train | train.py:225 | Cross-validation metrics: {'accuracy': 0.644825, 'precision': 0.5433781082192651, 'recall': 0.5964265406976155, 'f1': 0.5686440139942793, 'roc_auc': 0.6966760417146388}
+2026-02-15 12:40:24 | INFO | src.training.train | train.py:232 | Final model training completed
+2026-02-15 12:40:24 | INFO | src.training.evaluate | evaluate.py:28 | Evaluator initialized
+2026-02-15 12:40:24 | INFO | src.training.evaluate | evaluate.py:32 | Calculating evaluation metrics
+2026-02-15 12:40:24 | INFO | src.training.evaluate | evaluate.py:43 | Evaluation completed: {'accuracy': 0.64385, 'precision': 0.5420766292394953, 'recall': 0.5965605095541401, 'f1_score': 0.5680150403299169, 'roc_auc': 0.6354819008676049, 'confusion_matrix': [[8194, 3956], [3167, 4683]]}
+2026-02-15 12:40:24 | INFO | src.training.train | train.py:257 | Model saved at model_registry\model_20260215_124024\model.pkl
+2026-02-15 12:40:24 | INFO | src.training.evaluate | evaluate.py:53 | Evaluation report saved at model_registry\model_20260215_124024\evaluation.json
+2026-02-15 12:40:24 | INFO | src.training.train | train.py:289 | Model metadata saved at model_registry\model_20260215_124024\model.yaml
+2026-02-15 12:40:24 | INFO | src.training.train | train.py:290 | Training pipeline completed successfully
+2026-02-15 12:40:24 | INFO | __main__ | run.py:96 | Model saved at: model_registry\model_20260215_124024\model.pkl
+2026-02-15 12:40:24 | INFO | __main__ | run.py:98 | ========== PIPELINE COMPLETED ==========
+2026-02-15 12:46:53 | INFO | __main__ | run.py:24 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 12:46:53 | INFO | __main__ | run.py:48 | PipelineRunner initialized
+2026-02-15 12:46:53 | INFO | __main__ | run.py:56 | ========== PIPELINE STARTED ==========
+2026-02-15 12:46:53 | INFO | __main__ | run.py:61 | STEP 1: Loading raw data
+2026-02-15 12:46:53 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 12:46:53 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 12:46:53 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 12:46:53 | INFO | __main__ | run.py:66 | Raw data shape: (100000, 10)
+2026-02-15 12:46:53 | INFO | __main__ | run.py:71 | STEP 2: Validating data
+2026-02-15 12:46:53 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 12:46:53 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 12:46:53 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 12:46:53 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 12:46:53 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 12:46:53 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 12:46:53 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 12:46:53 | INFO | __main__ | run.py:79 | STEP 3: Feature engineering
+2026-02-15 12:46:53 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 12:46:53 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 12:46:54 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 12:46:54 | INFO | __main__ | run.py:84 | Processed data shape: (100000, 13)
+2026-02-15 12:46:54 | INFO | __main__ | run.py:91 | STEP 4: Training model
+2026-02-15 12:46:54 | INFO | src.training.train | train.py:40 | Trainer initialized successfully
+2026-02-15 12:46:54 | INFO | src.training.train | train.py:167 | Training started
+2026-02-15 12:46:54 | INFO | src.training.train | train.py:188 | Train-test split completed
+2026-02-15 12:46:54 | INFO | src.training.train | train.py:55 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 12:46:54 | INFO | src.training.train | train.py:56 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 12:46:54 | INFO | src.training.train | train.py:110 | Using model: random_forest
+2026-02-15 12:46:54 | INFO | src.training.train | train.py:195 | Starting Stratified K-Fold Cross Validation
+2026-02-15 12:47:39 | INFO | __main__ | run.py:24 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 12:47:39 | INFO | __main__ | run.py:48 | PipelineRunner initialized
+2026-02-15 12:47:39 | INFO | __main__ | run.py:56 | ========== PIPELINE STARTED ==========
+2026-02-15 12:47:39 | INFO | __main__ | run.py:61 | STEP 1: Loading raw data
+2026-02-15 12:47:39 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 12:47:39 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 12:47:39 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 12:47:39 | INFO | __main__ | run.py:66 | Raw data shape: (100000, 10)
+2026-02-15 12:47:39 | INFO | __main__ | run.py:71 | STEP 2: Validating data
+2026-02-15 12:47:39 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 12:47:39 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 12:47:39 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 12:47:39 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 12:47:39 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 12:47:39 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 12:47:39 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 12:47:39 | INFO | __main__ | run.py:79 | STEP 3: Feature engineering
+2026-02-15 12:47:39 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 12:47:39 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 12:47:40 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 12:47:40 | INFO | __main__ | run.py:84 | Processed data shape: (100000, 13)
+2026-02-15 12:47:40 | INFO | __main__ | run.py:91 | STEP 4: Training model
+2026-02-15 12:47:40 | INFO | src.training.train | train.py:40 | Trainer initialized successfully
+2026-02-15 12:47:40 | INFO | src.training.train | train.py:167 | Training started
+2026-02-15 12:47:40 | INFO | src.training.train | train.py:188 | Train-test split completed
+2026-02-15 12:47:40 | INFO | src.training.train | train.py:55 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 12:47:40 | INFO | src.training.train | train.py:56 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 12:47:40 | INFO | src.training.train | train.py:110 | Using model: random_forest
+2026-02-15 12:47:40 | INFO | src.training.train | train.py:195 | Starting Stratified K-Fold Cross Validation
+2026-02-15 12:48:05 | INFO | __main__ | run.py:24 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 12:48:05 | INFO | __main__ | run.py:48 | PipelineRunner initialized
+2026-02-15 12:48:05 | INFO | __main__ | run.py:56 | ========== PIPELINE STARTED ==========
+2026-02-15 12:48:05 | INFO | __main__ | run.py:61 | STEP 1: Loading raw data
+2026-02-15 12:48:05 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 12:48:05 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 12:48:05 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 12:48:05 | INFO | __main__ | run.py:66 | Raw data shape: (100000, 10)
+2026-02-15 12:48:05 | INFO | __main__ | run.py:71 | STEP 2: Validating data
+2026-02-15 12:48:05 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 12:48:05 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 12:48:05 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 12:48:05 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 12:48:05 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 12:48:05 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 12:48:05 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 12:48:05 | INFO | __main__ | run.py:79 | STEP 3: Feature engineering
+2026-02-15 12:48:05 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 12:48:05 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 12:48:07 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 12:48:07 | INFO | __main__ | run.py:84 | Processed data shape: (100000, 13)
+2026-02-15 12:48:07 | INFO | __main__ | run.py:91 | STEP 4: Training model
+2026-02-15 12:48:07 | INFO | src.training.train | train.py:40 | Trainer initialized successfully
+2026-02-15 12:48:07 | INFO | src.training.train | train.py:167 | Training started
+2026-02-15 12:48:07 | INFO | src.training.train | train.py:188 | Train-test split completed
+2026-02-15 12:48:07 | INFO | src.training.train | train.py:55 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 12:48:07 | INFO | src.training.train | train.py:56 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 12:48:07 | INFO | src.training.train | train.py:110 | Using model: random_forest
+2026-02-15 12:48:07 | INFO | src.training.train | train.py:195 | Starting Stratified K-Fold Cross Validation
+2026-02-15 13:00:21 | INFO | __main__ | run.py:24 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 13:00:21 | INFO | __main__ | run.py:48 | PipelineRunner initialized
+2026-02-15 13:00:21 | INFO | __main__ | run.py:56 | ========== PIPELINE STARTED ==========
+2026-02-15 13:00:21 | INFO | __main__ | run.py:61 | STEP 1: Loading raw data
+2026-02-15 13:00:21 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 13:00:21 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 13:00:21 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 13:00:21 | INFO | __main__ | run.py:66 | Raw data shape: (100000, 10)
+2026-02-15 13:00:21 | INFO | __main__ | run.py:71 | STEP 2: Validating data
+2026-02-15 13:00:21 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 13:00:21 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 13:00:21 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 13:00:21 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 13:00:21 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 13:00:21 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 13:00:21 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 13:00:21 | INFO | __main__ | run.py:79 | STEP 3: Feature engineering
+2026-02-15 13:00:21 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 13:00:21 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 13:00:22 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 13:00:22 | INFO | __main__ | run.py:84 | Processed data shape: (100000, 13)
+2026-02-15 13:00:22 | INFO | __main__ | run.py:91 | STEP 4: Training model
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:46 | Trainer initialized successfully
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:226 | Training started
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:247 | Train-test split completed
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:61 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:62 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:116 | Using model: random_forest
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:254 | Starting Stratified K-Fold Cross Validation
+2026-02-15 13:00:22 | INFO | src.training.train | train.py:187 | Training fold 1
+2026-02-15 13:00:28 | INFO | src.training.train | train.py:187 | Training fold 2
+2026-02-15 13:00:33 | INFO | src.training.train | train.py:187 | Training fold 3
+2026-02-15 13:00:39 | INFO | src.training.train | train.py:187 | Training fold 4
+2026-02-15 13:00:45 | INFO | src.training.train | train.py:187 | Training fold 5
+2026-02-15 13:00:50 | INFO | src.training.train | train.py:187 | Training fold 6
+2026-02-15 13:00:56 | INFO | src.training.train | train.py:187 | Training fold 7
+2026-02-15 13:01:01 | INFO | src.training.train | train.py:187 | Training fold 8
+2026-02-15 13:01:06 | INFO | src.training.train | train.py:187 | Training fold 9
+2026-02-15 13:01:12 | INFO | src.training.train | train.py:187 | Training fold 10
+2026-02-15 13:01:17 | INFO | src.training.train | train.py:260 | Cross validation completed: {'cv_accuracy_mean': 0.6634, 'cv_accuracy_std': 0.0055084594034993, 'cv_f1_mean': 0.5129606807843332, 'cv_f1_std': 0.01100760673275537, 'cv_auc_mean': 0.6976299054640046, 'cv_auc_std': 0.005587322159721528}
+2026-02-15 13:01:23 | INFO | src.training.train | train.py:268 | Final model training completed
+2026-02-15 13:01:23 | INFO | src.training.evaluate | evaluate.py:28 | Evaluator initialized
+2026-02-15 13:01:23 | INFO | src.training.evaluate | evaluate.py:32 | Calculating evaluation metrics
+2026-02-15 13:01:23 | INFO | src.training.evaluate | evaluate.py:43 | Evaluation completed: {'accuracy': 0.66475, 'precision': 0.594675045477096, 'recall': 0.4580891719745223, 'f1_score': 0.5175217672879039, 'roc_auc': 0.628180388456397, 'confusion_matrix': [[9699, 2451], [4254, 3596]]}
+2026-02-15 13:01:23 | INFO | src.training.train | train.py:293 | Model saved at model_registry\model_20260215_130123\model.pkl
+2026-02-15 13:01:23 | INFO | src.training.evaluate | evaluate.py:53 | Evaluation report saved at model_registry\model_20260215_130123\evaluation.json
+2026-02-15 13:01:23 | INFO | src.training.train | train.py:325 | Model metadata saved at model_registry\model_20260215_130123\model.yaml
+2026-02-15 13:01:23 | INFO | src.training.train | train.py:326 | Training pipeline completed successfully
+2026-02-15 13:01:23 | INFO | __main__ | run.py:96 | Model saved at: model_registry\model_20260215_130123\model.pkl
+2026-02-15 13:01:23 | INFO | __main__ | run.py:98 | ========== PIPELINE COMPLETED ==========
+2026-02-15 13:07:44 | INFO | __main__ | run.py:22 | current working directory: C:\Users\C566795\OneDrive - Anheuser-Busch InBev\Documents\temp\project_customer_churn\customer-churn-ds
+2026-02-15 13:07:44 | INFO | __main__ | run.py:46 | PipelineRunner initialized
+2026-02-15 13:07:44 | INFO | __main__ | run.py:54 | ========== PIPELINE STARTED ==========
+2026-02-15 13:07:44 | INFO | __main__ | run.py:59 | STEP 1: Loading raw data
+2026-02-15 13:07:44 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 13:07:44 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 13:07:44 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 13:07:44 | INFO | __main__ | run.py:64 | Raw data shape: (100000, 10)
+2026-02-15 13:07:44 | INFO | __main__ | run.py:69 | STEP 2: Validating data
+2026-02-15 13:07:44 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 13:07:44 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 13:07:44 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 13:07:44 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 13:07:44 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 13:07:45 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 13:07:45 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 13:07:45 | INFO | __main__ | run.py:77 | STEP 3: Feature engineering
+2026-02-15 13:07:45 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 13:07:45 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 13:07:45 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 13:07:45 | INFO | __main__ | run.py:82 | Processed data shape: (100000, 13)
+2026-02-15 13:07:45 | INFO | __main__ | run.py:89 | STEP 4: Training model
+2026-02-15 13:07:45 | INFO | src.training.train | train.py:46 | Trainer initialized successfully
+2026-02-15 13:07:45 | INFO | src.training.train | train.py:226 | Training started
+2026-02-15 13:07:46 | INFO | src.training.train | train.py:247 | Train-test split completed
+2026-02-15 13:07:46 | INFO | src.training.train | train.py:61 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 13:07:46 | INFO | src.training.train | train.py:62 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 13:07:46 | INFO | src.training.train | train.py:116 | Using model: random_forest
+2026-02-15 13:07:46 | INFO | src.training.train | train.py:254 | Starting Stratified K-Fold Cross Validation
+2026-02-15 13:07:46 | INFO | src.training.train | train.py:187 | Training fold 1
+2026-02-15 13:07:51 | INFO | src.training.train | train.py:187 | Training fold 2
+2026-02-15 13:07:57 | INFO | src.training.train | train.py:187 | Training fold 3
+2026-02-15 13:08:03 | INFO | src.training.train | train.py:187 | Training fold 4
+2026-02-15 13:08:08 | INFO | src.training.train | train.py:187 | Training fold 5
+2026-02-15 13:08:13 | INFO | src.training.train | train.py:187 | Training fold 6
+2026-02-15 13:08:19 | INFO | src.training.train | train.py:187 | Training fold 7
+2026-02-15 13:08:24 | INFO | src.training.train | train.py:187 | Training fold 8
+2026-02-15 13:08:30 | INFO | src.training.train | train.py:187 | Training fold 9
+2026-02-15 13:08:35 | INFO | src.training.train | train.py:187 | Training fold 10
+2026-02-15 13:08:41 | INFO | src.training.train | train.py:260 | Cross validation completed: {'cv_accuracy_mean': 0.6634, 'cv_accuracy_std': 0.0055084594034993, 'cv_f1_mean': 0.5129606807843332, 'cv_f1_std': 0.01100760673275537, 'cv_auc_mean': 0.6976299054640046, 'cv_auc_std': 0.005587322159721528}
+2026-02-15 13:08:47 | INFO | src.training.train | train.py:268 | Final model training completed
+2026-02-15 13:08:47 | INFO | src.training.evaluate | evaluate.py:28 | Evaluator initialized
+2026-02-15 13:08:47 | INFO | src.training.evaluate | evaluate.py:32 | Calculating evaluation metrics
+2026-02-15 13:08:47 | INFO | src.training.evaluate | evaluate.py:43 | Evaluation completed: {'accuracy': 0.66475, 'precision': 0.594675045477096, 'recall': 0.4580891719745223, 'f1_score': 0.5175217672879039, 'roc_auc': 0.628180388456397, 'confusion_matrix': [[9699, 2451], [4254, 3596]]}
+2026-02-15 13:08:47 | INFO | src.training.train | train.py:293 | Model saved at model_registry\model_20260215_130847\model.pkl
+2026-02-15 13:08:47 | INFO | src.training.evaluate | evaluate.py:53 | Evaluation report saved at model_registry\model_20260215_130847\evaluation.json
+2026-02-15 13:08:47 | INFO | src.training.train | train.py:325 | Model metadata saved at model_registry\model_20260215_130847\model.yaml
+2026-02-15 13:08:47 | INFO | src.training.train | train.py:326 | Training pipeline completed successfully
+2026-02-15 13:08:47 | INFO | __main__ | run.py:94 | Model saved at: model_registry\model_20260215_130847\model.pkl
+2026-02-15 13:08:47 | INFO | __main__ | run.py:96 | ========== PIPELINE COMPLETED ==========
