@@ -16,3 +16,4 @@ model_registry/
 .vscode/
 .idea/
 .vscode/
+.DS_Store
