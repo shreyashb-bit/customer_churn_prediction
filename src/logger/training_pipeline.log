@@ -294,3 +294,53 @@
 2026-02-15 13:08:47 | INFO | src.training.train | train.py:326 | Training pipeline completed successfully
 2026-02-15 13:08:47 | INFO | __main__ | run.py:94 | Model saved at: model_registry\model_20260215_130847\model.pkl
 2026-02-15 13:08:47 | INFO | __main__ | run.py:96 | ========== PIPELINE COMPLETED ==========
+2026-02-15 16:49:07 | INFO | __main__ | run.py:22 | current working directory: E:\DS lectures\customer-churn-ds\customer_churn_prediction
+2026-02-15 16:49:07 | INFO | __main__ | run.py:46 | PipelineRunner initialized
+2026-02-15 16:49:07 | INFO | __main__ | run.py:54 | ========== PIPELINE STARTED ==========
+2026-02-15 16:49:07 | INFO | __main__ | run.py:59 | STEP 1: Loading raw data
+2026-02-15 16:49:07 | INFO | src.data.load_data | load_data.py:28 | DataLoader initialized
+2026-02-15 16:49:07 | INFO | src.data.load_data | load_data.py:37 | Loading data from: data/raw/customer_churn_dataset.csv
+2026-02-15 16:49:07 | INFO | src.data.load_data | load_data.py:60 | Data loaded successfully. Shape=(100000, 10)
+2026-02-15 16:49:07 | INFO | __main__ | run.py:64 | Raw data shape: (100000, 10)
+2026-02-15 16:49:07 | INFO | __main__ | run.py:69 | STEP 2: Validating data
+2026-02-15 16:49:07 | INFO | src.data.validate_data | validate_data.py:28 | DataValidator initialized
+2026-02-15 16:49:07 | INFO | src.data.validate_data | validate_data.py:109 | Starting data validation
+2026-02-15 16:49:07 | INFO | src.data.validate_data | validate_data.py:45 | Required column validation passed
+2026-02-15 16:49:07 | INFO | src.data.validate_data | validate_data.py:64 | Missing value validation passed. Max missing=0.0300
+2026-02-15 16:49:07 | INFO | src.data.validate_data | validate_data.py:86 | Target validation passed. Classes=2
+2026-02-15 16:49:07 | INFO | src.data.validate_data | validate_data.py:102 | No duplicate rows detected
+2026-02-15 16:49:07 | INFO | src.data.validate_data | validate_data.py:116 | Data validation completed successfully
+2026-02-15 16:49:07 | INFO | __main__ | run.py:77 | STEP 3: Feature engineering
+2026-02-15 16:49:07 | INFO | src.features.build_features | build_features.py:43 | FeatureBuilder initialized
+2026-02-15 16:49:07 | INFO | src.features.build_features | build_features.py:47 | Starting feature engineering
+2026-02-15 16:49:08 | INFO | src.features.build_features | build_features.py:56 | Processed dataset saved at data/processed/processed_data.csv
+2026-02-15 16:49:08 | INFO | __main__ | run.py:82 | Processed data shape: (100000, 13)
+2026-02-15 16:49:08 | INFO | __main__ | run.py:89 | STEP 4: Training model
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:46 | Trainer initialized successfully
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:226 | Training started
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:247 | Train-test split completed
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:61 | Numeric features: ['customer_id', 'age', 'tenure_months', 'monthly_charges', 'total_charges', 'support_calls', 'late_payments', 'avg_monthly_value', 'support_call_ratio', 'payment_risk']
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:62 | Categorical features: ['contract_type', 'internet_service']
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:116 | Using model: logistic_regression
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:254 | Starting Stratified K-Fold Cross Validation
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:187 | Training fold 1
+2026-02-15 16:49:08 | INFO | src.training.train | train.py:187 | Training fold 2
+2026-02-15 16:49:09 | INFO | src.training.train | train.py:187 | Training fold 3
+2026-02-15 16:49:09 | INFO | src.training.train | train.py:187 | Training fold 4
+2026-02-15 16:49:09 | INFO | src.training.train | train.py:187 | Training fold 5
+2026-02-15 16:49:09 | INFO | src.training.train | train.py:187 | Training fold 6
+2026-02-15 16:49:10 | INFO | src.training.train | train.py:187 | Training fold 7
+2026-02-15 16:49:10 | INFO | src.training.train | train.py:187 | Training fold 8
+2026-02-15 16:49:10 | INFO | src.training.train | train.py:187 | Training fold 9
+2026-02-15 16:49:10 | INFO | src.training.train | train.py:187 | Training fold 10
+2026-02-15 16:49:11 | INFO | src.training.train | train.py:260 | Cross validation completed: {'cv_accuracy_mean': 0.644825, 'cv_accuracy_std': 0.005653041216902638, 'cv_f1_mean': 0.5686440139942793, 'cv_f1_std': 0.006502261776671123, 'cv_auc_mean': 0.6966760417146388, 'cv_auc_std': 0.006127896900545539}
+2026-02-15 16:49:11 | INFO | src.training.train | train.py:268 | Final model training completed
+2026-02-15 16:49:11 | INFO | src.training.evaluate | evaluate.py:28 | Evaluator initialized
+2026-02-15 16:49:11 | INFO | src.training.evaluate | evaluate.py:32 | Calculating evaluation metrics
+2026-02-15 16:49:11 | INFO | src.training.evaluate | evaluate.py:43 | Evaluation completed: {'accuracy': 0.64385, 'precision': 0.5420766292394953, 'recall': 0.5965605095541401, 'f1_score': 0.5680150403299169, 'roc_auc': 0.6354819008676049, 'confusion_matrix': [[8194, 3956], [3167, 4683]]}
+2026-02-15 16:49:11 | INFO | src.training.train | train.py:293 | Model saved at model_registry\model_20260215_164911\model.pkl
+2026-02-15 16:49:11 | INFO | src.training.evaluate | evaluate.py:53 | Evaluation report saved at model_registry\model_20260215_164911\evaluation.json
+2026-02-15 16:49:11 | INFO | src.training.train | train.py:325 | Model metadata saved at model_registry\model_20260215_164911\model.yaml
+2026-02-15 16:49:11 | INFO | src.training.train | train.py:326 | Training pipeline completed successfully
+2026-02-15 16:49:11 | INFO | __main__ | run.py:94 | Model saved at: model_registry\model_20260215_164911\model.pkl
+2026-02-15 16:49:11 | INFO | __main__ | run.py:96 | ========== PIPELINE COMPLETED ==========
